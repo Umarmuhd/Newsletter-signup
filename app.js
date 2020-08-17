@@ -44,9 +44,7 @@ app.post("/", function (req, res) {
         },
         body: jsonData
     }
-
-    console.log(firstName, lastName, email);
-
+    
     request(options, function (error, response, body) {
         if (error || response.statusCode !== 200) {
             res.sendFile(__dirname + `/failure.html`)
